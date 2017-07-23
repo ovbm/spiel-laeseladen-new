@@ -54,7 +54,7 @@
 }
 
 /*about page*/
-span .abouthervorheben, .uebermich{
+.hervorheben, .uebermich{
   font-weight: bold;
   font-style: italic;
   font-size: 1.5em;
@@ -86,6 +86,78 @@ p.teamfunktion{
     border-bottom: 1px solid #ddd;
   }
 }
+
+/*page filialen*/
+
+.filiale div{
+  margin-bottom: 2em;
+}
+
+.googlemap-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.googlemap-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.oeffnungszeitentabelle{
+  margin: 1em 0;
+  background-color: #fff;
+}
+
+.oeffnungszeitentabelle tr{
+  text-align: center;
+  vertical-align: top;
+  padding:0.25em;
+}
+
+.oeffnungszeitentabelle th{
+  width:33%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  vertical-align: bottom;
+  padding: 1em;
+  line-height: 1.25em;
+}
+
+.oeffnungszeitentabelle th:not(:last-child),
+.oeffnungszeitentabelle td:not(:last-child){
+  border-right: 8px solid #f6f6f6;
+}
+
+.oeffnungszeitentabelle td{
+  vertical-align: top;
+  padding: 0.5em 1em 1em 1em;
+  line-height: 1.5em;
+}
+
+@media only screen and (max-width: 767px) {
+  .oeffnungszeitentabelle th{
+    display: none;
+  }
+  .oeffnungszeitentabelle td{
+    display:block;
+    box-sizing:border-box;
+    clear:both;
+  }
+  .oeffnungszeitentabelle td:before{
+    content: attr(data-th) ":";
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
 
 /*page layouts*/
 .col{

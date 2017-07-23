@@ -88,9 +88,16 @@ p.teamfunktion{
 }
 
 /*page filialen*/
+.filiale:last-child{
+  padding-left: 1.5em;
+}
 
-.filiale div{
+.filiale div, .filiale img{
   margin-bottom: 2em;
+}
+
+.filialenbild{
+  padding:0 !important;
 }
 
 .googlemap-responsive{
@@ -155,6 +162,9 @@ p.teamfunktion{
     width: 100%;
     display: block;
     text-align: center;
+  }
+  .filiale:last-child{
+    padding-left: 0;
   }
 }
 

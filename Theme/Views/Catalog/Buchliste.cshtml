@@ -1,0 +1,60 @@
+﻿@model BuchlisteModel
+@{
+    Layout = "";
+    Html.AddCssFileParts("~/Plugins/Widgets.BzApi/Content/BzApi/BzApi.css");
+    Html.AddScriptParts("~/Plugins/Widgets.BzApi/Scripts/BzApi.js");
+}
+@using Nop.Web.Framework.UI
+@using Nop.Plugin.Widgets.BzApi.Models
+@using MvcPaging
+
+<div class="pager">
+    @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount, new AjaxOptions {UpdateTargetId = "gridcontainer"}).Options(o => o.Action("ShowGroup"))
+</div>
+
+<div id="gridcontainer">
+@foreach (var bookItem in Model.BookItems)
+{
+    var titel = bookItem.Titel.Substring(0, bookItem.Titel.Length <= 50 ? bookItem.Titel.Length : 50).Trim();
+    <form action="#" id="product-details-form-@bookItem.Bznr" method="post">
+        <input type="hidden" id="id-Titel" name="Titel" value="@bookItem.Titel">
+        <input type="hidden" id="id-Autor" name="Autor" value="@bookItem.Autor">
+        <input type="hidden" id="id-Isbn" name="Isbn" value="@bookItem.Isbn">
+        <input type="hidden" id="id-Bznr" name="Bznr" value="@bookItem.Bznr">
+        <input type="hidden" id="id-Preis" name="Preis" value="@bookItem.Preis">
+        <input type="hidden" id="id-Einband" name="Einband" value="@bookItem.Einband">
+        <input type="hidden" id="id-Titelbild" name="Titelbild" value="@bookItem.Titelbild">
+        <input type="hidden" id="id-Verlag" name="Verlag" value="@bookItem.Verlag">
+
+        <div class="artBox-Wrapper-SBZ item-box">
+            <div class="artBox-Row1">
+                <div class="artBox-SmallImage">
+                    <a href="#" onclick="BzApi.bzapiBuchdetail('#product-details-form-@bookItem.Bznr'); return false;"><img src="@bookItem.Titelbild" alt="Cover-Bild zu @bookItem.Titel"></a>
+                </div>
+            </div>
+            <div class="artBox-Row2">
+                <h3><a href="#" onclick="BzApi.bzapiBuchdetail('#product-details-form-@bookItem.Bznr'); return false;">@titel</a></h3>
+                <span class="sbzAutor">@bookItem.Autor</span>
+                <span class="sbzVerlag">@bookItem.Verlag</span>
+            </div>
+
+            <div class="artBox-Row3">
+                <span class="sbzEinband">@bookItem.Einband</span><span class="sbzEJ">&nbsp;|&nbsp;@bookItem.Erscheinungsjahr</span>
+                <!-- <div class="stateBlue">
+                    <a class="liefer-tp" title="@bookItem.Meldetext" href="#" data-toggle="tooltip"><span class="glyphicon glyphicon-flag"></span>Lieferhinweis</a>
+                </div> -->
+            </div>
+
+            <div class="artBox-Row4">
+                <div class="artBox-Wrapper-Price">
+                    <div class="artBox-Currency">CHF</div><div class="artBox-Price">@Convert.ToDecimal(bookItem.Preis).ToString("0.00")</div>
+                </div>
+                <div class="buttons artBox-Wrapper-Basket">
+                    <input class="button-2 product-box-add-to-cart-button" value="In Warenkorb" onclick="BzApi.bzapiinsertproduct('#product-details-form-@bookItem.Bznr'); return false;" type="button">
+                </div>
+            </div>
+
+        </div>
+    </form>
+}
+</div>

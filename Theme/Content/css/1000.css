@@ -252,13 +252,42 @@
 }
 .header-menu > ul > li > a,
 .header-menu > ul > li > span {
+	transition: 0.5s all;
 	display: block;
 	padding: 5px 20px;
-	font-size: 14px; /*reset zeroing*/
-	font-weight: bold;
+	font-size: 16px; /*reset zeroing*/
+	font-weight: 600;
 	color: #333;
-	text-transform: uppercase;
 	cursor: pointer;
+}
+.header-menu > ul > li > a, .header-menu > ul > li > a:visited, .header-menu > ul > li > a:hover, .header-menu > ul > li > a:active {
+	backface-visibility: hidden;
+	position: relative;
+	transition: 0.5s color ease;
+	text-decoration: none;
+	font-size: 16px;
+}
+.header-menu > ul > li > a:hover{
+	color:#8546ae;
+}
+.header-menu > ul > li > a:hover:after{
+	width:80%;
+}
+.header-menu > ul > li > a:after{
+	content: "";
+	transition: 0.5s all ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	bottom: -0.25em;
+	height:3px;
+	height: 0.25rem;
+  width: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+  background: #8546ae;
+
 }
 
 .flyout-cart-wrapper {
@@ -375,7 +404,11 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.category-navigation-title:hover:after{
+  background-color: #f74258;
+}
 .category-navigation-title:after {
+	transition: 0.5s all ease;
 	content: "";
 	position: absolute;
 	top: 19px;

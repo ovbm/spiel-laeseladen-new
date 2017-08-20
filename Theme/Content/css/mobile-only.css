@@ -56,21 +56,21 @@
 	top: 42px;
 }
 .mobile-sticky-logo .admin-header-links ~ .responsive-nav-wrapper-parent {
-	top: 152px;
+	top: 102px;
 }
 
 .two-columns-area {
 	margin: 100px 0 25px;
 }
 .admin-header-links ~ .two-columns-area {
-	margin-top: 205px;
+	margin-top: 155px;
 }
 .master-wrapper-content {
-	margin-top: 160px;
-	padding: 25px 20px;
+	margin-top: 110px;
+	padding: 20px 15px;
 }
 .admin-header-links ~ .master-wrapper-content {
-	margin-top: 205px;
+	margin-top: 155px;
 }
 .two-columns-area ~ .master-wrapper-content {
 	margin-top: 0 !important; /*important because of demo-strip*/
@@ -288,7 +288,7 @@
 	top: 113px;
 }
 .mobile-sticky-logo .admin-header-links ~ .responsive-nav-wrapper-parent .flyout-cart-wrapper {
-	top: 205px;
+	top: 155px;
 }
 .cart-trigger {
 	display: none;
@@ -321,7 +321,7 @@
 }
 .mobile-sticky-logo .admin-header-links ~ .responsive-nav-wrapper-parent .header-links,
 .mobile-sticky-logo .admin-header-links ~ .responsive-nav-wrapper-parent .header-selectors {
-	top: 205px;
+	top: 155px;
 }
 .header-links li {
 	border-top: 1px solid #ececec;

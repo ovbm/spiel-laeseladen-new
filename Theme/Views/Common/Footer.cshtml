@@ -52,7 +52,7 @@
                     <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.CustomerInfo")</a></li>
                     <li><a href="@Url.RouteUrl("CustomerAddresses")">@T("Account.CustomerAddresses")</a></li>
                     <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Account.CustomerOrders")</a></li>
-                    
+
                     @if (Model.ShoppingCartEnabled)
                     {
                         <li><a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a></li>
@@ -80,9 +80,14 @@
                     <strong>@T("SevenSpikes.Themes.Pavilion.Footer.ContactUs")</strong>
                 </div>
                 <ul class="list">
-                    <li class="address"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Address")</span></li>
-                    <li class="email"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Email")</span></li>
-                    <li class="phone"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Phone")</span></li>
+                    <li class="contacttitle">Lachen</li>
+                    <li class="address"><span>Kreuzplatz 6, 8853 Lachen</span></li>
+                    <li class="email"><span> <a href="mailto:info@spiel-laeselade.ch">info@spiel-laeselade.ch</a></span></li>
+                    <li class="phone"><span>055 442 51 76</span></li>
+                    <li class="contacttitle">Rapperswil</li>
+                    <li class="address"><span>Kniestrasse 31, 8640 Rapperswil</span></li>
+                    <li class="email"><span> <a href="mailto:rapperswil@spiel-laeselade.ch">rapperswil@spiel-laeselade.ch</a></span></li>
+                    <li class="phone"><span>055 211 05 91</span></li>
                 </ul>
             </div>
         </div>

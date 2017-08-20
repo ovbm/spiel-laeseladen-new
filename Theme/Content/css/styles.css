@@ -76,7 +76,7 @@ body {
     max-width: 100%;
 	overflow-x: hidden; /* responsive navigation & filters scroll bug fix*/
 	background: #fff;
-	font: normal 400 14px 'Open Sans', sans-serif;
+	font: normal 300 14px 'Signika Negative', sans-serif;
 	color: #777;
 }
 a {
@@ -105,7 +105,7 @@ textarea:focus, select:focus {
 	color: #333;
 }
 input, textarea, select, button {
-	font-family: 'Open Sans';
+	font-family: 'Signika Negative', sans-serif;
 	font-size: 14px;
 }
 input:disabled,

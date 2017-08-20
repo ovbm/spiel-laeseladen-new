@@ -303,7 +303,7 @@ button.ticket-info-button.k-button:before,
     color: #8546ae;
   }
   /* secondary color */
-  
+
   .admin-header-links,
   .store-search-box {
     background-color: #f42535;
@@ -314,7 +314,7 @@ button.ticket-info-button.k-button:before,
 }
 @media all and (min-width: 481px) {
   /*plugins*/
-  
+
   .spc-categories .product-box-add-to-cart-button:hover {
     background-color: #8546ae;
   }
@@ -331,7 +331,7 @@ button.ticket-info-button.k-button:before,
     outline-color: #8546ae;
   }
   /*plugins*/
-  
+
   .ropc .section .title {
     border-bottom-color: #8546ae;
   }
@@ -365,7 +365,7 @@ button.ticket-info-button.k-button:before,
     color: #8546ae;
   }
   /*plugins*/
-  
+
   .ropc .coupon-box-panel .coupon-code button:hover,
   .ropc .giftcard-box-panel .coupon-code button:hover {
     outline-color: #8546ae;
@@ -384,7 +384,7 @@ button.ticket-info-button.k-button:before,
     border-bottom-color: #8546ae;
   }
   /* secondary color */
-  
+
   .header-lower {
     background-color: #f42535;
   }

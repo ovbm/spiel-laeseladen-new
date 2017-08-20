@@ -36,7 +36,7 @@
                 var taxTypeSelectorHtml = @Html.Action("TaxTypeSelector", "Common");
                 var currencySelectorHtml = @Html.Action("CurrencySelector", "Common");
                 var languageSelectorHtml = @Html.Action("LanguageSelector", "Common");
-                
+
                 MvcHtmlString headerSelectorWidgetHtml = @Html.Widget("header_selectors");
                 // it is better to trim the string and then check for null or empty because the MvcHtmlString.IsNullOrEmpty fail if the variable contains empty spaces
                 var headerSelectorWidgetHtmlString = headerSelectorWidgetHtml.ToHtmlString().Trim();
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="header-selector-widget" style="display: none;">@headerSelectorWidgetHtml</div>
-             
+
             }
             <div class="header-links-wrapper">
                 <label>@T("SevenSpikes.Themes.Pavilion.Header.MyAccount")</label>
@@ -92,7 +92,7 @@
             @Html.Action("FlyoutShoppingCart", "ShoppingCart")
         </div>
     </div>
-    
+
     <div class="header-lower">
         <div class="center">
             @if (showCategoriesInSideMenu)
@@ -106,7 +106,7 @@
                     </div>
                 }
             }
-            
+
             <div class="search-box store-search-box @if (!showCategoriesInSideMenu){<text>full-width</text>}">
                 @Html.Action("SearchBox", "Catalog")
             </div>

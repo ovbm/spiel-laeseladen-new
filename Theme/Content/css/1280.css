@@ -7,7 +7,7 @@
 
 
 /*=====================================================
-    
+
     BIG SCREENS
 
 =====================================================*/
@@ -116,7 +116,7 @@
 	width: 285px;
 }
 .two-colums-area-right {
-	width: 888px;
+	width: 1200px;
 }
 
 /* HOMEPAGE CAROUSELS */
@@ -259,5 +259,5 @@
 .forum-search-box .search-box-text {
 	width: 350px !important;
 }
- 
+
 }

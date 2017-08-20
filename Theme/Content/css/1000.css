@@ -351,7 +351,7 @@
 }
 
 .header-lower {
-	background-color: #f42535;
+	background-color: #f42535 ;
 	padding: 9px 0;
 }
 .header-lower .center {
@@ -385,7 +385,7 @@
 	background: #f74258 url('../img/category-nav.png') center no-repeat;
 }
 .home-page-body .category-navigation-title {
-	cursor: auto;
+	cursor: pointer;
 }
 .category-navigation-list-wrapper {
 	position: absolute;
@@ -565,7 +565,7 @@
 	position: relative;
 	z-index: 0;
 	float: right;
-	width: 708px;
+	width: 980px;
 }
 .slider-fullwidth {
 	margin-top: -60px;
@@ -1383,4 +1383,36 @@
 	white-space: nowrap;
 }
 
+}
+
+@media all and (max-width: 1000px) and (min-width: 768px) {
+	.master-wrapper-content {
+		width: 748px;
+		min-height: 300px;
+		margin: auto;
+	}
+	.header .center {
+		width: 748px;
+		margin: auto;
+	}
+	.header-menu .root-category-items > .sublist-wrap {
+		top: auto;
+		left: 0;
+		width: 748px;
+		margin: 0 0 0 -196px; /*depends on logo cell width, which is always fixed*/
+	}
+	.two-columns-area > .center {
+		width: 748px;
+		margin: auto;
+	}
+	.footer .center {
+		width: 708px;
+		margin: auto;
+	}
+	.two-colums-area-right {
+		position: relative;
+		z-index: 0;
+		float: right;
+		width: 748px;
+	}
 }

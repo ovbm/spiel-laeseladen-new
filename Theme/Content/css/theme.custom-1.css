@@ -613,6 +613,54 @@ p.teamfunktion{
     padding-top: 0px !important;
 }
 
+/*Category Navigation*/
+@media all and (min-width: 767px) {
+
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist,
+.root-category-items > .sublist-wrap > .sublist { /*this is the inner list inside the flyout panel*/
+	overflow: hidden;
+  width: 245px;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	padding: 15px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li,
+.root-category-items > .sublist-wrap > .sublist > li { /*this is a subcategory item (contains a list)*/
+	float: left;
+  width:100%;
+	padding: 10px;
+	font-size: 13px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li:nth-child(5n+1),
+.root-category-items > .sublist-wrap > .sublist > li:nth-child(5n+1) {
+	clear: both; /*edit nth child number when adding the banner on the right and also if "back button" is removed from the markup*/
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > a,
+.root-category-items > .sublist-wrap > .sublist > li > a { /*this is a subcategory item title (list title)*/
+	display: block;
+	margin: 0;
+  color: #8546ae;
+	border-bottom: 0px;
+	padding: ;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li { /*this is a sub-subcategory item*/
+	padding: 6px 0 6px 5px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li a:hover,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li a:hover {
+	color: #8546ae;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist ul,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist ul { /*deeper level subcategories remain hidden*/
+	display: none;
+}
+
+
+}
+
 @media only screen and (max-width: 767px) {
  .col {
    width:100%;

@@ -51,10 +51,10 @@
                     }
                 </a>
             }
-            
+
             @if (category.SubCategories.Count > 0)
             {
-                <ul class="sublist">
+                <ul class="sublist @category.Name">
                     @foreach (var subCategory in category.SubCategories)
                     {
                         @RenderCategoryLineOnCategoryPage(subCategory, true)

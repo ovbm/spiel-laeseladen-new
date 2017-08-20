@@ -402,7 +402,7 @@ button.ticket-info-button.k-button:before,
 
 @media only screen and (max-width: 767px) {
   .header-logo a img{
-    width: 50%;
+    width: 30%;
   }
 }
 

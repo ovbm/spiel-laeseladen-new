@@ -1635,6 +1635,7 @@ label, label + * {
 .manufacturer-item .title,
 .vendor-item .title {
 	position: relative;
+	height:50px;
 	top: 20px;
 	text-align: center;
 	z-index: 1;

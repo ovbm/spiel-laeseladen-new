@@ -284,7 +284,7 @@ button.ticket-info-button.k-button:before,
 .ui-datepicker-calendar .ui-state-active {
   outline-color: #f42535;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 767px){
   .responsive-nav-wrapper > div,
   .plus-button {
     background-color: #8546ae;
@@ -336,7 +336,7 @@ button.ticket-info-button.k-button:before,
     border-bottom-color: #8546ae;
   }
 }
-@media all and (min-width: 1001px) {
+@media all and (min-width: 769px) {
   .cart-trigger:before,
   .flyout-cart-wrapper:hover .cart-trigger,
   .category-navigation-title:after,

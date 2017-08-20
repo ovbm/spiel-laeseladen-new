@@ -6,8 +6,8 @@
 .ishop-overview-left p { line-height:24px; }
 .ishop-overview-right { width:100% !important; float:none !important; margin-left:0 !important; padding:0 !important; box-shadow: 0 0 6px 0 rgba(0,0,0,.2);}
 }
-@media all and (max-width: 1000px) {
-	
+@media all and (max-width: 767px){
+
 .admin-header-links {
 	position: fixed;
 	top: 0;
@@ -169,7 +169,7 @@
 }
 .android23 .header-menu {
     left: -320px;
-}        
+}
 .header-menu.open {
     box-shadow: 1px 0 5px rgba(0,0,0,0.5);
 }
@@ -212,10 +212,10 @@
 	font-size: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
-} 
+}
 .header-menu > ul li > .with-subcategories {
 	width: 270px;
-	float: left;   
+	float: left;
 }
 .plus-button {
 	position:relative;
@@ -245,7 +245,7 @@
 }
 .android23 .header-menu .sublist-wrap {
     left: -320px;
-}        
+}
 .notAndroid23 .header-menu .sublist-wrap.active {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
@@ -425,7 +425,7 @@
 }
 
 @media all and (min-width: 769px) and (max-width: 1000px) {
-	
+
 .mini-shopping-cart .items {
 	overflow: hidden;
 }
@@ -433,5 +433,5 @@
 	float: left;
 	width: 50%;
 }
-	
+
 }

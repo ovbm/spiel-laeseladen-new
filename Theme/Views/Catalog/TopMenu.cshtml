@@ -47,6 +47,7 @@
     @{
         var topMenuCategories = Model.Categories.Where(x => x.IncludeInTopMenu).ToList();
 
+
         if (Model.Categories.Count > 0)
         {
             foreach (var category in topMenuCategories)
@@ -54,6 +55,7 @@
                 @RenderCategoryLine(category, true)
             }
         }
+        <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
 
         foreach (var topic in Model.Topics)
         {
@@ -61,13 +63,12 @@
         }
 
         // No categories or topics to display? In this case let's display some default menu items (should we?).
-        <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
         if (Model.NewProductsEnabled)
         {
             <li><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
         }
         @*<li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>*@
-        @*<li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>*@ @* no need to display my account because it is already present as a separate menu in header upper *@ 
+        @*<li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>*@ @* no need to display my account because it is already present as a separate menu in header upper *@
         if (Model.BlogEnabled)
         {
             <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>

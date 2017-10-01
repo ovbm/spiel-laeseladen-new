@@ -1,0 +1,55 @@
+﻿@model ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+@using Nop.Services.Common;
+@using Nop.Core.Infrastructure;
+
+<div class="additional-details">
+	@{
+		var genericAttributeService = EngineContext.Current.Resolve<IGenericAttributeService>();
+		var attributes = genericAttributeService.GetAttributesForEntity(Model.Id, "Product");
+		foreach (var gAitem in attributes)
+		{	
+			if (gAitem.Key != "Autorentext" && gAitem.Key != "Autor(en)" && gAitem.Key != "Einband")
+			{
+				<div class="sku">
+					<span class="label">@gAitem.Key:</span>
+					<span class="value" itemprop="@gAitem.Key" id="@gAitem.Key-@Model.Id">@Html.Raw(HttpUtility.HtmlDecode(@gAitem.Value))</span>
+				</div>
+			}
+		}
+	}
+					
+						
+    @*SKU*@
+    @if (!String.IsNullOrWhiteSpace(Model.Sku) && Model.ShowSku)
+    {
+        <div class="sku">
+            <span class="label">@T("Products.Sku"):</span>
+            <span class="value" itemprop="sku" id="sku-@Model.Id">@Model.Sku</span>
+        </div>
+    }
+    @*Manufacturer part number*@
+    @if (!String.IsNullOrWhiteSpace(Model.ManufacturerPartNumber) && Model.ShowManufacturerPartNumber)
+    {
+        <div class="manufacturer-part-number">
+            <span class="label">@T("Products.ManufacturerPartNumber"):</span>
+            <span class="value" id="mpn-@Model.Id">@Model.ManufacturerPartNumber</span>
+        </div>
+    }
+    @*GTIN*@
+    @if (!String.IsNullOrWhiteSpace(Model.Gtin) && Model.ShowGtin)
+    {
+        <div class="gtin">
+            <span class="label">@T("Products.GTIN"):</span>
+            <span class="value" id="gtin-@Model.Id">@Model.Gtin</span>
+        </div>
+    }
+    @*Vendor*@
+    @if (Model.ShowVendor)
+    {
+        <div class="product-vendor">
+            <span class="label">@T("Products.Vendor"):</span>
+            <span class="value"><a href="@Url.RouteUrl("Vendor", new { SeName = Model.VendorModel.SeName })">@Model.VendorModel.Name</a></span>
+        </div>
+    }
+</div>

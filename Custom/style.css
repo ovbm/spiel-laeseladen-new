@@ -54,11 +54,18 @@
 }
 
 /*about page*/
-.hervorheben, .uebermich{
+.uebermich{
   font-weight: bold;
   font-style: italic;
   font-size: 1.5em;
   color: #8944ae;
+}
+
+.abouttext p:first-child {
+  margin-top: 0;
+}
+.filialenpage p:first-child{
+  margin:0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -70,7 +77,10 @@
 }
 
 p.teamfunktion{
-  margin: 1em 0;
+  margin: 0;
+}
+p.teamstandort{
+  margin: 0;
 }
 
 .teampage img{
@@ -88,6 +98,8 @@ p.teamfunktion{
 }
 
 /*page filialen*/
+
+
 .filiale:last-child{
   padding-left: 1.5em;
 }
@@ -98,6 +110,10 @@ p.teamfunktion{
 
 .filialenbild{
   padding:0 !important;
+}
+
+.filialenpage p, #ueberuns p{
+  font-size: 16px;
 }
 
 .googlemap-responsive{
@@ -167,7 +183,23 @@ p.teamfunktion{
     padding-left: 0;
   }
 }
+/*AGB*/
 
+.abgpage{
+  width: 80%;
+  background-color: white;
+  padding: 1em;
+}
+
+.agbpage p{
+  margin: 0 0 2 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .abgpage{
+    width: 100%;
+  }
+}
 
 /*page layouts*/
 .col{
@@ -227,4 +259,11 @@ p.teamfunktion{
    width: 0;
    height: 0;
  }
+}
+
+.hervorheben{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.5em !important;
+  color: #8944ae;
 }

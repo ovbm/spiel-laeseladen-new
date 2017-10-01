@@ -1,0 +1,82 @@
+﻿@model ContactUsModel
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-contact-page");
+}
+<div class="page contact-page">
+    <div class="page-title">
+        <h1>@T("PageTitle.ContactUs")</h1>
+    </div>
+    <div class="pagebody">
+      <div class="kontaktlachen col col-6-12">
+        <div class="kontakt">
+          <h2>Lachen</h2>
+          <p>
+            Spiel + Läselade Lachen <br>
+            Kreuzplatz 6 <br>
+            8853 Lachen <br>
+            Tel: 055 442 51 76 <br>
+            Email: <a href="mailto:info@spiel-laeselade.ch">info@spiel-laeselade.ch</a>
+          </p>
+        </div>
+
+        <div class="oeffnungszeiten">
+          <h2>Öffnungszeiten</h2>
+          <table class="oeffnungszeitentabelle">
+            <thead>
+              <tr>
+                <th>Montag</th>
+                <th>Dienstag bis Freitag</th>
+                <th>Samstag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Montag" >14:00 - 18:30 Uhr</td>
+                <td data-th="Dienstag bis Freitag" >08:30 - 12:00 Uhr <br> 14:00 - 18:30 Uhr </td>
+                <td data-th="Samstag" >8:30 - 16:00 Uhr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="kontaktrapperswil col col-6-12" >
+        <div class="kontakt">
+          <h2>Rapperswil</h2>
+          <p>
+            Spiel + Läselade Rapperswil <br>
+            Kniestrasse 31 <br>
+            8640 Rapperswil <br>
+            Tel: 055 211 05 91 <br>
+            Email: <a href="mailto:rapperswil@spiel-laeselade.ch">rapperswil@spiel-laeselade.ch</a>
+          </p>
+        </div>
+        <div class="oeffnungszeiten">
+          <h2>Öffnungszeiten</h2>
+          <table class="oeffnungszeitentabelle">
+            <thead>
+              <tr>
+                <th>Dienstag bis Freitag</th>
+                <th>Samstag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Dienstag bis Freitag" >09:00 - 18:00 Uhr</td>
+                <td data-th="Samstag" >9:00 - 16:00 Uhr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+        @Html.Widget("contactus_bottom")
+    </div>
+</div>

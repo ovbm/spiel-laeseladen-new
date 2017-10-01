@@ -31,6 +31,7 @@
                     {
                         <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
                     }
+                    <li><a href="http://www.privat-anzeigen.ch/contactus">Öffnungszeiten</a></li>
                 </ul>
             </div>
             <div class="footer-block">
@@ -38,6 +39,10 @@
                     <strong>@T("Footer.CustomerService")</strong>
                 </div>
                 <ul class="list">
+                  <li>Warenwert CHF 0 bis 20: CHF 4.00 </li>
+                  <li>Warenwert CHF 20 bis 100: CHF 6.00 </li>
+                  <li>Warenwert ab CHF 100: kostenlos </li>
+
                     @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn2).ToList())
                     {
                         <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>

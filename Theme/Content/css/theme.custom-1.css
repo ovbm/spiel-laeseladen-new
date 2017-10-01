@@ -580,6 +580,10 @@ p.uebermich{
   padding-right: 0;
 }
 
+.col:last-child:after{
+  clear:both;
+}
+
 .col:last-child img{
   padding-right: 1.5em;
 }
@@ -621,6 +625,12 @@ p.uebermich{
 /*Jcarousel*/
 .jCarouselMainWrapper {
     padding-top: 0px !important;
+}
+
+/*footer*/
+
+li.contacttitle{
+  font-weight: bold;
 }
 
 /*Category Navigation*/

@@ -113,6 +113,19 @@ p.teamstandort{
   }
 }
 
+/* befreundete organisationen */
+
+a.organistaion-box img {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: box-shadow 0.4s;
+}
+
+a.organistaion-box img:hover {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
 /*page filialen*/
 
 

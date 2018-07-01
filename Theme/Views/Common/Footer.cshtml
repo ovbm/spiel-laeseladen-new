@@ -42,6 +42,7 @@
                   <li>Warenwert CHF 0 bis 20: CHF 4.00 </li>
                   <li>Warenwert CHF 20 bis 100: CHF 6.00 </li>
                   <li>Warenwert ab CHF 100: kostenlos </li>
+                  <li>Lieferung in die Schweiz und Lichtenstein. </li>
 
                     @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn2).ToList())
                     {
@@ -99,12 +100,13 @@
     </div>
     <div class="footer-lower">
         <div class="center">
-            <!-- <ul class="accepted-payments">
-                <li class="method1"></li>
-                <li class="method2"></li>
-                <li class="method3"></li>
-                <li class="method4"></li>
-            </ul> -->
+        <div class="payment-facilities"
+          <ul>
+            <li><img alt"zahlungsmethode" src="https://www.spiel-laeselade.ch/Themes/Pavilion/Content/img/visa.png"/></li>
+            <li><img alt"zahlungsmethode" src="https://www.spiel-laeselade.ch/Themes/Pavilion/Content/img/master-card.png"/></li>
+            <li><img alt"zahlungsmethode" src="https://www.spiel-laeselade.ch/Themes/Pavilion/Content/img/paypal.png"/></li>
+          </ul>
+        </div>
             <div class="footer-disclaimer">
                 @T("Content.CopyrightNotice", DateTime.Now.Year, Model.StoreName)
             </div>

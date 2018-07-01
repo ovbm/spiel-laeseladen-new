@@ -11,7 +11,8 @@
 
 @media only screen and (max-width: 767px) {
   .header-logo a img{
-    width: 50%;
+    height:60px;
+    padding:2px;
   }
 }
 
@@ -23,6 +24,7 @@
 
 
 /*custom pages*/
+
 .pagebody{
   width:100%;
   margin: 0 auto;
@@ -53,6 +55,18 @@
   color: #8944ae;
 }
 
+/*homepage*/
+
+#homepagetext{
+  background-color: white;
+  padding:16px;
+}
+
+#homepagetext h1{
+  color: #8944ae;
+}
+
+
 /*about page*/
 .uebermich{
   font-weight: bold;
@@ -77,10 +91,12 @@
 }
 
 p.teamfunktion{
-  margin: 0;
+  margin: 0.5em 0;
 }
 p.teamstandort{
-  margin: 0;
+  margin: 3px 0 1em 0;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .teampage img{
@@ -192,7 +208,10 @@ p.teamstandort{
 }
 
 .agbpage p{
-  margin: 0 0 2 0;
+  margin: 1em;
+}
+.agbpage h3{
+  margin-top:1em;
 }
 
 @media only screen and (max-width: 767px) {
@@ -248,6 +267,61 @@ p.teamstandort{
 .col-11-12{
   width: 91.66%;
 }
+/*Jcarousel*/
+.jCarouselMainWrapper {
+    padding-top: 0px !important;
+}
+
+/*footer*/
+
+li.contacttitle{
+  font-weight: bold;
+}
+
+/*Category Navigation*/
+@media all and (min-width: 767px) {
+
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist,
+.root-category-items > .sublist-wrap > .sublist { /*this is the inner list inside the flyout panel*/
+	overflow: hidden;
+  width: 245px;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	padding: 15px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li,
+.root-category-items > .sublist-wrap > .sublist > li { /*this is a subcategory item (contains a list)*/
+	float: left;
+  width:100%;
+	padding: 10px;
+	font-size: 13px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li:nth-child(5n+1),
+.root-category-items > .sublist-wrap > .sublist > li:nth-child(5n+1) {
+	clear: both; /*edit nth child number when adding the banner on the right and also if "back button" is removed from the markup*/
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > a,
+.root-category-items > .sublist-wrap > .sublist > li > a { /*this is a subcategory item title (list title)*/
+	display: block;
+	margin: 0;
+  color: #8546ae;
+	border-bottom: 0px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li { /*this is a sub-subcategory item*/
+	padding: 6px 0 6px 5px;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li a:hover,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist li a:hover {
+	color: #8546ae;
+}
+.category-navigation-list > li:not(:last-of-type) > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist ul,
+.root-category-items > .sublist-wrap > .sublist > li > .sublist-wrap > .sublist ul { /*deeper level subcategories remain hidden*/
+	display: none;
+}
+}
 
 @media only screen and (max-width: 767px) {
  .col {
@@ -266,4 +340,31 @@ p.teamstandort{
   font-style: italic;
   font-size: 1.5em !important;
   color: #8944ae;
+}
+
+.spc{
+  padding-top:20px;
+}
+
+/*Footer*/
+.footer-lower .payment-facilities{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-lower ul {
+  list-style: none;
+}
+
+.footer-lower .payment-facilities li {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 12px;
+    width: 48px;
+    text-align: center;
+}
+
+.footer-lower .payment-facilities img {
+    vertical-align: middle;
+    max-height: 22px;
 }

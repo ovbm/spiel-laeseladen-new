@@ -1,0 +1,15 @@
+<p><a href="%Store.URL%">%Store.Name%</a> <br /><br />Guten Tag %Order.CustomerFullName%, <br />Besten Dank f&uuml;r Ihre Bestellung beim <a href="%Store.URL%">%Store.Name%</a>. Den aktuellen Status Ihrer Bestellung k&ouml;nnen Sie jeterzeit unter folgendem Link abrufen:&nbsp;<a href="%Order.OrderURLForCustomer%" target="_blank">%Order.OrderURLForCustomer%</a>&nbsp;</p>
+<h3>Bestell-Details&nbsp;</h3>
+<p>Bestell-Nummer: %Order.OrderNumber%<br />Bestell-Datum: %Order.CreatedOn%<br />Lieferart: %Order.ShippingMethod%&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td>Rechnungs-Adresse:<br />%Order.BillingFirstName% %Order.BillingLastName%<br />%Order.BillingAddress1%<br />%Order.BillingCity% %Order.BillingZipPostalCode%<br />%Order.BillingStateProvince% %Order.BillingCountry%</td>
+<td>&nbsp;Liefer-Adresse:<br />&nbsp;%Order.ShippingFirstName% %Order.ShippingLastName%<br />&nbsp;%Order.ShippingAddress1%<br />&nbsp;%Order.ShippingCity% %Order.ShippingZipPostalCode%<br />&nbsp;%Order.ShippingStateProvince% %Order.ShippingCountry%</td>
+</tr>
+</tbody>
+</table>
+<h3><br />Zahlungshinweis</h3>
+<p>Bei Vorauszahlung oder einer Bestellung auf Rechnung bitten wir sie den Rechnungsbetrag auf folgendes Konto unter Nennung der Bestellnummer -&nbsp;<strong>%Order.OrderNumber%</strong> -&nbsp; einzuzahlen:</p>
+<p>Bank: Schwyzer Kantonalbank, Lachen <br />Konto: 394475-4726<br />IBAN: CH09 0077 7003 9447 5472 6</p>
+<p>%Order.Product(s)%</p>
